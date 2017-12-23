@@ -38,8 +38,8 @@ class shippingRuemsTariffRP
     public function __construct()
     {
         $this->date = date('Ymd');
-        if (file_exists(dirname(__FILE__).'\country.json')) {
-            $this->cn = json_decode(file_get_contents(dirname(__FILE__).'\country.json'), true);
+        if (file_exists(dirname(__FILE__).'/country.json')) {
+            $this->cn = json_decode(file_get_contents(dirname(__FILE__).'/country.json'), true);
         }
     }
 
