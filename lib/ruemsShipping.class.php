@@ -21,7 +21,7 @@ class ruemsShipping extends waShipping
 
     public function allowedAddress()
     {
-        return json_decode(file_get_contents(dirname(__FILE__).'\allowedAddress.json'), true);
+        return json_decode(file_get_contents(dirname(__FILE__).'/allowedAddress.json'), true);
     }
 
     public function calculate()
@@ -200,14 +200,14 @@ class ruemsShipping extends waShipping
 
     public function getFullCountry($code)
     {
-        $ar = json_decode(file_get_contents(dirname(__FILE__).'\classes\country.json'), true);
+        $ar = json_decode(file_get_contents(dirname(__FILE__).'/classes/country.json'), true);
         $sar = array_column($ar, 'enName', 'code3');
         return $sar[strtoupper($code)];
     }
 
     public function getEstDate($code,$type = min)
     {
-        $ar = json_decode(file_get_contents(dirname(__FILE__).'\classes\country.json'), true);
+        $ar = json_decode(file_get_contents(dirname(__FILE__).'/classes/country.json'), true);
         $sar = array();
         switch ($type) {
             case 'min':
